@@ -1,0 +1,280 @@
+%-------------------------
+%  in Latex
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+  frame code={}
+  center title,
+  left=0pt,
+  right=0pt,
+  top=0pt,
+  bottom=0pt,
+  colback=gray!20,
+  colframe=white,
+  width=\dimexpr\textwidth\relax,
+  enlarge left by=-2mm,
+  boxsep=4pt,
+  arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Vikash Kumar} % Your Name
+\newcommand{\course}{B.Tech - Computer Science and Engineering} % Your Course
+\newcommand{\roll}{170001054} % Your Roll No.
+\newcommand{\phone}{9001524714} % Your Phone Number
+\newcommand{\emaila}{cse170001054@iiti.ac.in} %Email 1
+\newcommand{\emailb}{vkumar7796@gmail.com} %Email 2
+\newcommand{\linkedin}{vikash-kumar-79835a196} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+
+{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} 
+  \\{Roll No.:\roll} & +91-\phone\\ 
+  \course &  \href{mailto:\emaila}{\emaila} \\ 
+  {Minor in French Language} & \href{mailto:\emailb}{\emailb}
+  \\{Indian Institute Of Technology Indore} & \href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin}
+\end{tabularx}
+}
+
+
+
+
+\section{Education}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech. CSE & Indian Institute of Technology Indore& 6.69 (Current) & 2017-Present\\
+
+ %Optional
+  \hline
+  Senior Secondary & Abhinav Public School Delhi (CBSE) & 86.6\% & 2016 \\
+  \hline
+  Secondary & Loyola High School Patna (CBSE) & 95.0\% & 2014 \\
+  \hline
+\end{tabularx}}
+\vspace{-2mm}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {Debris Flow of a Landslide} %Project Name
+      {Domain: Software Engineering} %Project Name, Location Name
+      {Jan. 2019 - June. 2019} %Event Dates
+      {\href{https://github.com/singh-tanmay7/Group_H_-Project-4-}{Github}} %Website
+      \resumeItemListStart
+        \item {Description: We had to develop a software that could estimate the volume of debris flow in a landslide using digital elevation map of the site from before and after the landslide. The software was also able to give the probability of failure of ground based on topographical data.}
+    \resumeItemListEnd
+    
+    \resumeProject
+      {Optimization Technique in Machine Learning} %Project Name
+      {Domain : Machine learning and Optimisation Techniques} %Project Name, Location Name
+      {July 2019 - Nov. 2019} %Event Dates
+      {\href{Link to github}{Github}} %Website
+      \resumeItemListStart
+        \item {Description: The goal of the project was to find the optimal travel route for a given set of location in a city. There were two sub-task to solve : }
+        \item {1.Find the travel time between each two location. A machine learning model was created to calculate the time between each two location using the taxi data of the city.}
+        \item {2. The output of the model was fed to the genetic algorithm to determine the optimal route.}
+    \resumeItemListEnd
+    
+    \resumeProject
+      {3d-Modelling of a Classroom using openGL} %Project Name
+      {Domain: Computer Graphics and Visualization} %Project Name, Location Name
+      {Jan. 2020 - May 2020} %Event Dates
+      {\href{Link to github}{Github}} %Website
+      \resumeItemListStart
+        \item {Description: We had to create a 3d-model of a classroom using the library openGL. We could navigate through the classroom using keyboard and mouse. The objects in the classroom were chair, table, walls, window, blackboard, fan, door, cupboard, etc. Multiple copies of few objects were created using translation and rotation. We had added animation for the rotation of the fan.}
+        \item {Implemented animation,text, pattern, translation and rotation. }
+    \resumeItemListEnd
+
+    \resumeProject
+      {Music Recommendation System} %Project Name
+      {Domain : Computer Intelligence} %Project Name, Location Name
+      {Jan 2020 - May 2020} %Event Dates
+      {\href{Link to github}{Github}}
+      \resumeItemListStart
+        \item {The goal of the project was to create a music recommendation system that used to suggest songs based on popularity, user playlist and other similar user based on the users listening data.}
+    \resumeItemListEnd
+    
+    % \resumeProject
+    %   {Project Name 2}
+    %   {6th Inter IIT TechMeet, IIT Madras}{Dec. 2017 - Jan. 2018}{\href{Links to Reports}{Reports}}
+    %   \resumeItemListStart
+    % \item {Work DOne 1}
+    %     \item {Work Done 2}
+    % \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+\section{Technical Skills}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming} % Category
+    {Python, C/C++, Matlab/Octave, R(Basic),Javascript(Basic) }
+ \resumeSubItem{Database} % Category
+    {MySQL} % Skills
+ \resumeSubItem{Others} % Category
+    {HTML/CSS, NodeJS, Tensorflow} % Skills
+%  \resumeSubItem{Tools/Frameworks} % Category
+%     {Keras, Tensorflow, Pytorch*, ROS, OpenCV}
+%  \resumeSubItem{Operating Systems}
+%  {Windows, Linux*} 
+\hfill \textit{\footnotesize{* Elementary proficiency}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+
+
+\section{Key courses taken}
+\resumeHeadingSkillStart
+ \resumeSubItem{Mathematics} % Category
+    {Linear Algebra, Basic Calculus, Complex Number, Probability, Numerical Methods}
+\resumeSubItem{Courses in Computer Science}
+ {Course Name 1, Course Name 2, Course Name 3, Course Name 4}
+%  \resumeSubItem{Electrical and Electronics} % Category
+%     {Advanced Control Systems, Digital Systems, Microprocessors} % Skills
+ \resumeHeadingSkillEnd
+
+
+\section{Positions of Responsibility}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Secretary} % Position
+    {XYZ Club, IIT Indore} %Club,Event
+    {Apr. 2018 - Apr. 2019} %Tenure Period
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+
+\section{Achievements}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{Bronze Medal} % Award
+    {XYZ Challenge, ABC Company, FGH City} % Event
+    {2018} %Event Year
+
+\resumeSubHeadingListEnd
+% \vspace{-2mm}
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+
+
+%-------------------------------------------
+\end{document}
